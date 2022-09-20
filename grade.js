@@ -9,7 +9,11 @@ function checkscore(){
     var myscore = inputbox.value
     if (myscore >= 45 && myscore <=49 ){
         // alert ("Omo mi");
-        doc.innerHTML = "<h1>PASS</h1>"
+        doc.innerHTML = "<h1>PASS</h1>";
+        songs.play();
+    }
+    else if( myscore >=30 && myscore <=44){
+        doc.innerHTML = "<h1>FAIL</h1>";
         songs.play();
     }
     else if (myscore >= 50 && myscore <=59 ){
@@ -31,8 +35,13 @@ function checkscore(){
     }
 
     else if (myscore >100 || myscore <0 ){
-        alert ("you do pass");
+        // alert ("YOUR ");
         doc.innerHTML = "<h1>invalid</h1>";
+        song4.play();
+    }
+    else if (myscore != Number ){
+        alert ("Enter number");
+        // doc.innerHTML = "<h1></h1>";
         song4.play();
     }
 
